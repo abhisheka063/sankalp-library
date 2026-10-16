@@ -45,6 +45,12 @@ body { margin: 0; background: #f3f6fa; }
 .row-actions { min-width:160px; }
 .MuiFormLabel-asterisk { color:#d32f2f !important; }
 .registration-form, .confirmation-card, .admin-login-card { margin-inline:auto; width:100%; }
+.confirmation-card.MuiPaper-root { margin:18px 0; padding:clamp(24px,4vw,40px); border:1px solid var(--border); border-radius:16px; background:var(--surface); color:var(--text-primary); text-align:center; }
+.confirmation-card .eyebrow { margin:16px 0 6px; color:#5276a5; }
+.confirmation-card h1.MuiTypography-root { margin:0 0 12px; color:var(--text-primary); font-size:clamp(1.5rem,3vw,2rem); }
+.confirmation-card .regno { margin:14px 0; color:var(--text-primary); font-size:1.25rem; font-weight:800; letter-spacing:.04em; }
+.confirmation-card .payment-next-step { max-width:680px; margin:18px auto; text-align:left; }
+.confirmation-card .check { margin:auto; background:#e2f5eb; color:#19834e; border-radius:50%; width:48px; height:48px; font-size:26px; display:grid; place-items:center; }
 @media (max-width:600px) {
   .library-toolbar { width:calc(100% - 28px); min-height:68px; }
   .header-address { width:calc(100% - 28px); font-size:.78rem !important; }
@@ -170,6 +176,8 @@ body { font-size:14px; }
 :root[data-theme="dark"] .drawer-bottom,
 :root[data-theme="dark"] .map-note { color:var(--text-secondary); }
 :root[data-theme="dark"] .map-frame { border-color:var(--border); }
+:root[data-theme="dark"] .confirmation-card .eyebrow { color:#f5c52e; }
+:root[data-theme="dark"] .confirmation-card .check { background:#18392c; color:#80d694; }
 
 /* Admin pages use the same compact form and surface tokens as registration. */
 .page-title { margin:12px 0 10px; }

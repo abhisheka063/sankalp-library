@@ -17,6 +17,13 @@ class RegistrationIn(BaseModel):
     payment_mode: Literal["Cash", "Online"] = "Cash"
     idempotency_key: str = Field(min_length=12, max_length=80)
 
+    @field_validator("emergency_contact", mode="before")
+    @classmethod
+    def empty_emergency_contact_is_none(cls, value):
+        if isinstance(value, str) and not value.strip():
+            return None
+        return value
+
     @field_validator("mobile", "emergency_contact")
     @classmethod
     def valid_mobile(cls, value):
