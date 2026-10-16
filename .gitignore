@@ -1,0 +1,12 @@
+.env
+.venv/
+.npm-cache/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.db
+*.tsbuildinfo
+node_modules/
+dist/
+data/
+/backend/integration-*-data/

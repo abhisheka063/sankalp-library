@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: sankalp-library-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile.backend
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://your-frontend.vercel.app
+      - key: PUBLIC_URL
+        value: https://your-frontend.vercel.app
+      - key: LIBRARY_ADDRESS
+        value: Newari More, Tari Bazaar Road, Raghunathpur, Siwan, Bihar, India
+      - key: CONTACT_PHONE
+        value: 9939697490
+      - key: STORAGE_DIR
+        value: /tmp/sankalp-library-data
